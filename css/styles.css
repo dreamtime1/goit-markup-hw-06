@@ -168,14 +168,14 @@ a {
 
 }
 
-@media (min-resolution: 192dpi) {
+/*@media (min-resolution: 192dpi) {
     .head {
         background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url(../images/background-main-title@2x.jpg);
     }
-}
+}*/
 
 .container {
 
@@ -1031,9 +1031,6 @@ a {
 }
 
 
-
-
-
 @media (max-width: 1157px) {
     .dscr-icon {
         display: none;
@@ -1195,6 +1192,7 @@ a {
         padding: 0;
     }
 }
+
 @media (min-width: 1158px) {
     .portfolio-list {
         max-width: 1440px;
@@ -1205,4 +1203,3 @@ a {
         justify-content: space-between;
     }
 }
-
