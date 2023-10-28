@@ -168,14 +168,14 @@ a {
 
 }
 
-/*@media (min-resolution: 192dpi) {
+@media (min-resolution: 192dpi) {
     .head {
         background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url(../images/background-main-title@2x.jpg);
     }
-}*/
+}
 
 .container {
 
@@ -499,10 +499,12 @@ a {
     display: flex;
     flex-direction: row;
     align-items: baseline;
+
 }
 
 .logo-footer-container {
     margin-right: 120px;
+    margin-bottom: 72px;
 
 }
 
@@ -520,7 +522,9 @@ a {
 
 }
 
-.footer-social-container {}
+.footer-social-container {
+    margin-bottom: 72px;
+}
 
 .footer-social-title {
     color: #fff;
@@ -596,7 +600,10 @@ a {
 
 }
 
-.subscribe-label {}
+.subscribe-label {
+    display: block;
+    margin-bottom: 16;
+}
 
 .subscribe-input {
     width: 264px;
@@ -633,6 +640,7 @@ a {
     background-color: #4d5ae5;
     border: none;
     border-radius: 4px;
+    margin: 0 auto;
 }
 
 .subscribe-icon {
@@ -856,7 +864,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-color: #fff;
     visibility: hidden;
@@ -870,6 +878,7 @@ a {
     height: 100%;
     margin: 0 auto;
     padding: 72px 24px 40px 16px;
+    flex-direction: column;
 }
 
 .mobile-menu-close-btn {
@@ -902,6 +911,14 @@ a {
 .mobile-menu-nav-link:hover,
 .mobile-menu-nav-link:focus {
     color: #404bbf;
+}
+
+.mobile-menu-navigation {
+margin-bottom: 168px;
+}
+
+.mobile-menu-nav-point:not(:last-child) {
+    margin-bottom: 40px;
 }
 
 .mobile-menu-navigation {
@@ -1000,29 +1017,40 @@ a {
     }
 
     .team-list,
-    .portfolio-list,
-    .footer .container footer-container{
+    .portfolio-list {
         flex-direction: column;
-        align-items: center;
+        align-items:center;
+
     }
 
-    .footer .container footer-container {
-        row-gap: 72px;
+    .footer .container {
+        flex-direction: column;
+        margin: 0;
+        
+    } 
+
+    .footer-paragraph{
+        text-align: left;
     }
 
-    .logo-footer-container,
-    .footer-social-container,
+        .subscribe-form {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .logo-footer-container{
+        text-align: center;
+        width: 288px;
+    }
+    .footer-social-container{
+        text-align: center;
+        padding-left: 30px;
+    }
     .subscribe-cont {
         text-align: center;
     }
 
-    .footer-paragraph {
-        text-align: start;
-    }
-
-    .subscribe-form {
-        flex-direction: column;
-    }
 
     .modal {
         width: 256px;
@@ -1031,18 +1059,19 @@ a {
 }
 
 
+
 @media (max-width: 1157px) {
     .dscr-icon {
         display: none;
     }
 }
 
-.head {
+/*.head {
     background-image: linear-gradient(to bottom,
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url(../images/background-main-title-alt.jpg);
-}
+}*/
 
 @media (min-resolution: 192dpi) {
     .head {
@@ -1092,8 +1121,8 @@ a {
     .head-title {
         font-size: 36px;
         line-height: 1.11;
-        padding-left: 36px;
-        padding-right: 36px;
+        /*padding-left: 36px;
+        padding-right: 36px;*/
         margin-bottom: 72px;
         text-transform: capitalize;
     }
@@ -1112,11 +1141,12 @@ a {
 
 @media (min-width: 768px) and (max-width: 1157px) {
     .container {
-        width: 768px;
+        width: 768px;   
     }
 
-    .header .container header-container {
-        padding: 0 16px;
+    .header .container{
+    padding-top: 5px;
+    padding-bottom: 5px;
     }
 
     .header-address-list {
@@ -1124,11 +1154,11 @@ a {
         gap: 12px;
     }
 
-    .header-point:first-child {
+    .header-point:first-child { 
         padding-top: 12px;
     }
 
-    .header-list-point:last-child {
+    .header-point:last-child {
         padding-bottom: 12px;
     }
 
@@ -1167,7 +1197,7 @@ a {
         flex-wrap: wrap;
         max-width: 768 px;
         row-gap: 64px;
-        margin: 0 auto;
+        justify-content: center;
     }
 
     .team-card {
@@ -1184,14 +1214,21 @@ a {
         max-width: 356px;
     }
 
-    .footer .container footer-container {
-        flex-wrap: wrap;
-        column-gap: 24px;
-        row-gap: 72px;
-        max-width: 496px;
-        padding: 0;
+    .footer .container{
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .logo-footer-container{
+        padding-left: 108px;
+    }
+
+    .footer-social-container{
+
     }
 }
+
 
 @media (min-width: 1158px) {
     .portfolio-list {
