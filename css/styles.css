@@ -168,14 +168,25 @@ a {
 
 }
 
-@media (min-resolution: 192dpi) {
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .head {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/background-main-title@2x.jpg);
+    }
+}
+
+/*@media (min-resolution: 192dpi) {
     .head {
         background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url(../images/background-main-title@2x.jpg);
     }
-}
+}*/
 
 .container {
 
@@ -194,7 +205,7 @@ a {
     letter-spacing: 0.02em;
     text-align: center;
     max-width: 496px;
-    height: 120px;
+    /*height: 120px;*/
     margin-right: auto;
     margin-left: auto;
 }
@@ -350,7 +361,7 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
-    margin: 8px;
+    margin-bottom: 8px;
 }
 
 .team-icons {
@@ -503,7 +514,7 @@ a {
 }
 
 .logo-footer-container {
-    margin-right: 120px;
+    /*margin-right: 120px;*/
     margin-bottom: 72px;
 
 }
@@ -533,12 +544,14 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
+    padding-left: 20px;
 }
 
 .footer-icons {
     display: flex;
     justify-content: center;
     gap: 16px;
+    padding-left: 20px;
 }
 
 .footer-icon {
@@ -581,7 +594,7 @@ a {
 }
 
 .subscribe-cont {
-    margin-left: 100px;
+    /*margin-left: 100px;*/
 }
 
 .subscribe-text {
@@ -591,12 +604,14 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
+    padding-left: 20px;
 
 }
 
 .subscribe-form {
     display: flex;
     gap: 24px;
+    padding-left: 20px;
 
 }
 
@@ -878,7 +893,9 @@ a {
     height: 100%;
     margin: 0 auto;
     padding: 72px 24px 40px 16px;
+    display: flex;
     flex-direction: column;
+
 }
 
 .mobile-menu-close-btn {
@@ -913,6 +930,10 @@ a {
     color: #404bbf;
 }
 
+
+.color{
+color: #404bbf;
+}
 .mobile-menu-navigation {
 margin-bottom: 168px;
 }
@@ -922,7 +943,7 @@ margin-bottom: 168px;
 }
 
 .mobile-menu-navigation {
-    margin-bottom: 168px;
+    margin-bottom: auto;
 }
 
 .mobile-menu-address-link {
@@ -1025,7 +1046,9 @@ margin-bottom: 168px;
 
     .footer .container {
         flex-direction: column;
-        margin: 0;
+        align-items: center;
+
+    /* margin: 0;*/
         
     } 
 
@@ -1041,11 +1064,11 @@ margin-bottom: 168px;
 
     .logo-footer-container{
         text-align: center;
-        width: 288px;
+        /*width: 288px;*/
     }
     .footer-social-container{
         text-align: center;
-        padding-left: 30px;
+    /* padding-left: 30px;*/
     }
     .subscribe-cont {
         text-align: center;
@@ -1066,21 +1089,31 @@ margin-bottom: 168px;
     }
 }
 
-/*.head {
+.head {
     background-image: linear-gradient(to bottom,
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url(../images/background-main-title-alt.jpg);
-}*/
+        url(../images/background-main-title.jpg);
+}
 
-@media (min-resolution: 192dpi) {
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .head {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/background-main-title@2x.jpg);
+    }
+}
+
+/*@media (min-resolution: 192dpi) {
     .head {
         background-image: linear-gradient(to bottom,
                 rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url(../images/background-main-title-alt@2x.jpg);
     }
-}
+}*/
 
 .service {
     padding-top: 96px;
@@ -1155,11 +1188,11 @@ margin-bottom: 168px;
     }
 
     .header-point:first-child { 
-        padding-top: 12px;
+        /*padding-top: 12px;*/
     }
 
     .header-point:last-child {
-        padding-bottom: 12px;
+        /*padding-bottom: 12px;*/
     }
 
     .header-address-list-item {
@@ -1178,6 +1211,16 @@ margin-bottom: 168px;
     .head {
         padding: 112px 0;
     }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .head {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url(../images/background-main-title@2x.jpg);
+            }
+        }
 
     .current {
         padding-bottom: 20px;
@@ -1215,17 +1258,17 @@ margin-bottom: 168px;
     }
 
     .footer .container{
-    width: 768px;
+    width: 550px;
     display: flex;
     flex-wrap: wrap;
     }
 
     .logo-footer-container{
-        padding-left: 108px;
+        /*padding-left: 108px;*/
     }
 
-    .footer-social-container{
-
+    .subscribe-cont{
+   
     }
 }
 
