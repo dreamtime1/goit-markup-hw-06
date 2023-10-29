@@ -604,14 +604,14 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
 
 }
 
 .subscribe-form {
     display: flex;
     gap: 24px;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
 
 }
 
